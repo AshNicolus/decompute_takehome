@@ -3,7 +3,7 @@
 An end-to-end AI system that classifies support tickets and generates grounded draft responses using a knowledge base — built entirely with open-source / offline tools (scikit-learn, numpy, pandas).
 
 ---
-
+![Architecture](image.png)
 ## Setup
 
 ### Requirements
