@@ -1,4 +1,4 @@
-import gradio as gr
+import streamlit as st
 import pandas as pd
 import warnings
 warnings.filterwarnings("ignore")
@@ -6,80 +6,75 @@ warnings.filterwarnings("ignore")
 from src.classification import build_improved, X_train, y_cat, y_pri
 from src.rag import retrieve, generate_response, CATEGORY_HINTS, ABSTAIN_THRESHOLD
 
-print("Loading and training models... this takes about 5 seconds.")
-cat_clf = build_improved()
-pri_clf = build_improved(class_weight="balanced")
+st.set_page_config(page_title="Decompute AI Support", page_icon="🤖", layout="wide")
 
-cat_clf.fit(X_train, y_cat)
-pri_clf.fit(X_train, y_pri)
-
-print("Models loaded successfully. Starting UI...")
-
-def process_ticket(user_message):
-    """
-    The core logic that runs when a user submits a ticket in the UI.
-    """
-    if not user_message.strip():
-        return "Please enter a ticket message.", "", "", ""
-
-    category = cat_clf.predict([user_message])[0]
-    priority = pri_clf.predict([user_message])[0]
-    cat_conf = cat_clf.predict_proba([user_message]).max()
+@st.cache_resource(show_spinner="Loading and training local models...")
+def load_models():
+    cat_clf = build_improved()
+    pri_clf = build_improved(class_weight="balanced")
     
-    hint = CATEGORY_HINTS.get(category, "")
-    query = f"{user_message} {hint}"
-    retrieved = retrieve(query, top_k=3)
-    
-    top_score = retrieved[0]["score"] if retrieved else 0.0
+    cat_clf.fit(X_train, y_cat)
+    pri_clf.fit(X_train, y_pri)
+    return cat_clf, pri_clf
 
-    should_abstain = (top_score < ABSTAIN_THRESHOLD) or (cat_conf < 0.30)
-    
-    if should_abstain:
-        response = " **ABSTAIN:** Insufficient information in the Knowledge Base to provide a reliable answer."
-        sources_str = "None"
-    else:
-        response = generate_response(user_message, category, retrieved)
-        unique_sources = list(dict.fromkeys(r["source"] for r in retrieved))
-        sources_str = ", ".join(unique_sources)
+cat_clf, pri_clf = load_models()
 
-    cat_display = f"**{category.replace('_', ' ').title()}** (Conf: {cat_conf:.2f})"
-    pri_display = f"**{priority.title()}**"
-    
-    return cat_display, pri_display, sources_str, response
+st.title("🤖 Decompute Support AI System")
+st.markdown("Submit a mock customer support ticket below. This pipeline runs **100% locally** using an offline ML architecture to classify the ticket and draft a grounded response.")
+st.divider()
 
-with gr.Blocks(theme=gr.themes.Soft(), title="Decompute Support AI") as demo:
-    gr.Markdown("# 🤖 Decompute Support AI System")
-    gr.Markdown("Submit a mock customer support ticket below. The offline ML pipeline will classify it and draft a grounded response using the Knowledge Base.")
-    
-    with gr.Row():
-        with gr.Column(scale=2):
-            ticket_input = gr.Textbox(
-                lines=5, 
-                placeholder="E.g., I was double charged for my subscription this month. Please help!", 
-                label="Incoming Support Ticket"
-            )
-            submit_btn = gr.Button("Process Ticket", variant="primary")
-            
-        with gr.Column(scale=1):
-            gr.Markdown("### 📊 Triage Results")
-            out_category = gr.Markdown("Category: *Pending*")
-            out_priority = gr.Markdown("Priority: *Pending*")
-            out_sources = gr.Markdown("Retrieved KB Sources: *Pending*")
-            
-    gr.Markdown("### 📝 Drafted Response")
-    out_response = gr.Textbox(lines=8, label="", interactive=False)
+col1, col2 = st.columns([1.5, 1])
 
-    submit_btn.click(
-        fn=process_ticket,
-        inputs=ticket_input,
-        outputs=[out_category, out_priority, out_sources, out_response]
+with col1:
+    st.subheader("📥 Incoming Ticket")
+    user_message = st.text_area(
+        "Enter support ticket message:",
+        height=150,
+        placeholder="e.g., I was double charged for my subscription this month. Please help!"
     )
+    process_btn = st.button("Process Ticket", type="primary", use_container_width=True)
 
-    ticket_input.submit(
-        fn=process_ticket,
-        inputs=ticket_input,
-        outputs=[out_category, out_priority, out_sources, out_response]
-    )
+if process_btn and user_message.strip():
+    with st.spinner("Analyzing ticket and retrieving KB sources..."):
 
-if __name__ == "__main__":
-    demo.launch(share=False)
+        category = cat_clf.predict([user_message])[0]
+        priority = pri_clf.predict([user_message])[0]
+        cat_conf = cat_clf.predict_proba([user_message]).max()
+
+        hint = CATEGORY_HINTS.get(category, "")
+        query = f"{user_message} {hint}"
+        retrieved = retrieve(query, top_k=3)
+        
+        top_score = retrieved[0]["score"] if retrieved else 0.0
+       
+        should_abstain = (top_score < ABSTAIN_THRESHOLD) or (cat_conf < 0.30)
+
+        with col2:
+            st.subheader("📊 Triage Results")
+        
+            display_cat = category.replace('_', ' ').title()
+            display_pri = priority.title()
+           
+            m1, m2 = st.columns(2)
+            m1.metric("Category", display_cat)
+            m2.metric("Priority", display_pri)
+            
+            st.metric("Classifier Confidence", f"{cat_conf:.1%}")
+            
+            if should_abstain:
+                st.error("**Retrieved Sources:** None (Confidence too low)")
+            else:
+                unique_sources = list(dict.fromkeys(r["source"] for r in retrieved))
+                st.info(f"**Retrieved Sources:** {', '.join(unique_sources)}")
+        
+        st.divider()
+        st.subheader("📝 Drafted Response")
+        
+        if should_abstain:
+            st.warning("⚠️ **ABSTAIN:** Insufficient information in the Knowledge Base to provide a reliable answer. Escalating to human agent.")
+        else:
+            response = generate_response(user_message, category, retrieved)
+            st.success(response)
+
+elif process_btn:
+    st.warning("Please enter a ticket message first.")
