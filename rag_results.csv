@@ -1,0 +1,275 @@
+ticket_id,predicted_category,predicted_priority,top_3_retrieved_sources,top_3_chunk_ids,top_retrieval_score,draft_response,confidence_score,abstain_flag,cat_confidence,pri_confidence
+0,billing,high,billing,billing_s0|billing_s2|billing_s5,0.3243,"Thank you for reaching out. Based on your Billing inquiry, here is information from our knowledge base that should help:
+
+Understand your subscription details, including pricing plans, billing cycles, and payment methods, all accessible from your dashboard. Should you need to update your payment information, our secure portal allows for quick and easy modifications.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: billing]",0.8195,0,0.8285,0.832
+1,account_access,medium,account,account_s3|account_s1|account_s0,0.3125,"Thank you for reaching out. Based on your Account Access inquiry, here is information from our knowledge base that should help:
+
+We prioritize the security of your account with advanced measures like two-factor authentication. You can easily reset your password using the 'Forgot Password' link on the login page or through your security settings.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: account]",0.8142,0,0.8501,0.5105
+2,general_query,medium,general,general_s1|general_s2|general_s4,0.2071,"Thank you for reaching out. Based on your General Query inquiry, here is information from our knowledge base that should help:
+
+This comprehensive knowledge base serves as your primary resource for answers to common questions and provides detailed getting started guides. Find crucial information on our terms of service, privacy policy, and acceptable use guidelines here.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: general]",0.6016,0,0.7177,0.6115
+3,technical_issue,medium,technical,technical_s2|technical_s1|technical_s0,0.2076,"Thank you for reaching out. Based on your Technical Issue inquiry, here is information from our knowledge base that should help:
+
+You can also check our real-time status page for updates on system performance and any scheduled maintenance. If you encounter any technical issues or error messages, please consult our dedicated troubleshooting section first.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: technical]",0.658,0,0.8987,0.6899
+4,billing,high,billing,billing_s0|billing_s2|billing_s5,0.3143,"Thank you for reaching out. Based on your Billing inquiry, here is information from our knowledge base that should help:
+
+Understand your subscription details, including pricing plans, billing cycles, and payment methods, all accessible from your dashboard. Should you need to update your payment information, our secure portal allows for quick and easy modifications.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: billing]",0.8333,0,0.8868,0.5731
+5,technical_issue,medium,technical|features,technical_s1|technical_s0|features_s3,0.1259,"Thank you for reaching out. Based on your Technical Issue inquiry, here is information from our knowledge base that should help:
+
+If you encounter any technical issues or error messages, please consult our dedicated troubleshooting section first. Our technical documentation offers comprehensive guides for API integration, allowing seamless connection with your existing systems.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: technical, features]",0.3456,0,0.3831,0.672
+6,account_access,high,account,account_s3|account_s1|account_s5,0.3764,"Thank you for reaching out. Based on your Account Access inquiry, here is information from our knowledge base that should help:
+
+We prioritize the security of your account with advanced measures like two-factor authentication. You can easily reset your password using the 'Forgot Password' link on the login page or through your security settings.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: account]",0.489,0,0.3303,0.4678
+7,account_access,medium,account,account_s3|account_s1|account_s0,0.233,"Thank you for reaching out. Based on your Account Access inquiry, here is information from our knowledge base that should help:
+
+We prioritize the security of your account with advanced measures like two-factor authentication. You can easily reset your password using the 'Forgot Password' link on the login page or through your security settings.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: account]",0.7038,0,0.8888,0.6069
+8,billing,medium,billing|account,billing_s0|account_s5|account_s3,0.2305,"Thank you for reaching out. Based on your Billing inquiry, here is information from our knowledge base that should help:
+
+Understand your subscription details, including pricing plans, billing cycles, and payment methods, all accessible from your dashboard. Keeping your account information current ensures you receive the best service and relevant communications.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: billing, account]",0.5201,0,0.4738,0.6449
+9,technical_issue,high,technical,technical_s5|technical_s1|technical_s3,0.2293,"Thank you for reaching out. Based on your Technical Issue inquiry, here is information from our knowledge base that should help:
+
+Your data's integrity and the platform's reliability are our top priorities. If you encounter any technical issues or error messages, please consult our dedicated troubleshooting section first.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: technical]",0.6784,0,0.8308,0.7258
+10,billing,high,billing|account,billing_s0|billing_s2|account_s0,0.3171,"Thank you for reaching out. Based on your Billing inquiry, here is information from our knowledge base that should help:
+
+Understand your subscription details, including pricing plans, billing cycles, and payment methods, all accessible from your dashboard. Should you need to update your payment information, our secure portal allows for quick and easy modifications.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: billing, account]",0.817,0,0.8428,0.7695
+11,account_access,high,account,account_s1|account_s3|account_s5,0.3501,"Thank you for reaching out. Based on your Account Access inquiry, here is information from our knowledge base that should help:
+
+You can easily reset your password using the 'Forgot Password' link on the login page or through your security settings. We prioritize the security of your account with advanced measures like two-factor authentication.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: account]",0.8822,0,0.8894,0.7125
+12,feature_request,low,features,features_s0|features_s3|features_s4,0.1663,"Thank you for reaching out. Based on your Feature Request inquiry, here is information from our knowledge base that should help:
+
+Explore the powerful features designed to streamline your workflow and significantly enhance productivity across your organization. Each feature is meticulously crafted to address key challenges faced by our users, offering practical and innovative solutions.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: features]",0.5709,0,0.9112,0.869
+13,technical_issue,medium,technical|account,technical_s1|account_s4|technical_s0,0.1504,"Thank you for reaching out. Based on your Technical Issue inquiry, here is information from our knowledge base that should help:
+
+If you encounter any technical issues or error messages, please consult our dedicated troubleshooting section first. Should you need to export your data for backup or migration, secure options are available within your account management section.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: technical, account]",0.478,0,0.6559,0.4979
+14,general_query,medium,general|technical,general_s1|technical_s0|technical_s5,0.1762,"Thank you for reaching out. Based on your General Query inquiry, here is information from our knowledge base that should help:
+
+This comprehensive knowledge base serves as your primary resource for answers to common questions and provides detailed getting started guides. Our technical documentation offers comprehensive guides for API integration, allowing seamless connection with your existing systems.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: general, technical]",0.5044,0,0.5901,0.5497
+15,billing,medium,billing|account,billing_s0|account_s3|account_s5,0.2492,"Thank you for reaching out. Based on your Billing inquiry, here is information from our knowledge base that should help:
+
+Understand your subscription details, including pricing plans, billing cycles, and payment methods, all accessible from your dashboard. We prioritize the security of your account with advanced measures like two-factor authentication.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: billing, account]",0.6024,0,0.5832,0.6889
+16,general_query,medium,general|billing,general_s1|billing_s3|general_s2,0.2439,"Thank you for reaching out. Based on your General Query inquiry, here is information from our knowledge base that should help:
+
+This comprehensive knowledge base serves as your primary resource for answers to common questions and provides detailed getting started guides. Information regarding cancellations, refunds, and service downgrades is clearly outlined in our terms of service.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: general, billing]",0.4122,0,0.3113,0.582
+17,general_query,low,general|billing,general_s1|general_s4|billing_s3,0.1835,"Thank you for reaching out. Based on your General Query inquiry, here is information from our knowledge base that should help:
+
+This comprehensive knowledge base serves as your primary resource for answers to common questions and provides detailed getting started guides. We are committed to providing a seamless and intuitive experience from initial onboarding to advanced daily usage.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: general, billing]",0.5663,0,0.74,0.6669
+18,technical_issue,medium,technical|general,technical_s1|general_s1|technical_s0,0.2128,"Thank you for reaching out. Based on your Technical Issue inquiry, here is information from our knowledge base that should help:
+
+If you encounter any technical issues or error messages, please consult our dedicated troubleshooting section first. This comprehensive knowledge base serves as your primary resource for answers to common questions and provides detailed getting started guides.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: technical, general]",0.6637,0,0.882,0.765
+19,technical_issue,medium,technical,technical_s1|technical_s0|technical_s2,0.2156,"Thank you for reaching out. Based on your Technical Issue inquiry, here is information from our knowledge base that should help:
+
+If you encounter any technical issues or error messages, please consult our dedicated troubleshooting section first. Our technical documentation offers comprehensive guides for API integration, allowing seamless connection with your existing systems.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: technical]",0.4821,0,0.4361,0.8061
+20,account_access,medium,account,account_s3|account_s1|account_s5,0.3629,"Thank you for reaching out. Based on your Account Access inquiry, here is information from our knowledge base that should help:
+
+We prioritize the security of your account with advanced measures like two-factor authentication. You can easily reset your password using the 'Forgot Password' link on the login page or through your security settings.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: account]",0.4903,0,0.3359,0.4508
+21,account_access,high,account,account_s1|account_s3|account_s0,0.3748,"Thank you for reaching out. Based on your Account Access inquiry, here is information from our knowledge base that should help:
+
+You can easily reset your password using the 'Forgot Password' link on the login page or through your security settings. We prioritize the security of your account with advanced measures like two-factor authentication.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: account]",0.9279,0,0.919,0.6338
+22,billing,high,billing,billing_s0|billing_s2|billing_s5,0.3001,"Thank you for reaching out. Based on your Billing inquiry, here is information from our knowledge base that should help:
+
+Understand your subscription details, including pricing plans, billing cycles, and payment methods, all accessible from your dashboard. Should you need to update your payment information, our secure portal allows for quick and easy modifications.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: billing]",0.8156,0,0.8934,0.7963
+23,technical_issue,low,technical,technical_s1|technical_s0|technical_s2,0.1911,"Thank you for reaching out. Based on your Technical Issue inquiry, here is information from our knowledge base that should help:
+
+If you encounter any technical issues or error messages, please consult our dedicated troubleshooting section first. Our technical documentation offers comprehensive guides for API integration, allowing seamless connection with your existing systems.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: technical]",0.4531,0,0.4308,0.3616
+24,general_query,medium,general|billing|account,general_s1|billing_s3|account_s5,0.215,"Thank you for reaching out. Based on your General Query inquiry, here is information from our knowledge base that should help:
+
+This comprehensive knowledge base serves as your primary resource for answers to common questions and provides detailed getting started guides. Information regarding cancellations, refunds, and service downgrades is clearly outlined in our terms of service.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: general, billing, account]",0.6381,0,0.7849,0.5815
+25,feature_request,low,account|features,account_s4|features_s0|features_s3,0.1944,"Thank you for reaching out. Based on your Feature Request inquiry, here is information from our knowledge base that should help:
+
+Should you need to export your data for backup or migration, secure options are available within your account management section. Explore the powerful features designed to streamline your workflow and significantly enhance productivity across your organization.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: account, features]",0.6232,0,0.8683,0.5739
+26,billing,medium,billing|account,billing_s0|account_s0|account_s3,0.3465,"Thank you for reaching out. Based on your Billing inquiry, here is information from our knowledge base that should help:
+
+Understand your subscription details, including pricing plans, billing cycles, and payment methods, all accessible from your dashboard. Manage all your personal and organizational profile information directly within your account settings, including name, email, and company details.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: billing, account]",0.6964,0,0.5823,0.6996
+27,technical_issue,medium,technical,technical_s2|technical_s1|technical_s0,0.1914,"Thank you for reaching out. Based on your Technical Issue inquiry, here is information from our knowledge base that should help:
+
+You can also check our real-time status page for updates on system performance and any scheduled maintenance. If you encounter any technical issues or error messages, please consult our dedicated troubleshooting section first.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: technical]",0.6096,0,0.8397,0.7622
+28,billing,high,billing,billing_s0|billing_s2|billing_s5,0.2977,"Thank you for reaching out. Based on your Billing inquiry, here is information from our knowledge base that should help:
+
+Understand your subscription details, including pricing plans, billing cycles, and payment methods, all accessible from your dashboard. Should you need to update your payment information, our secure portal allows for quick and easy modifications.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: billing]",0.4694,0,0.3428,0.5236
+29,feature_request,medium,features|technical,features_s0|features_s2|technical_s5,0.1741,"Thank you for reaching out. Based on your Feature Request inquiry, here is information from our knowledge base that should help:
+
+Explore the powerful features designed to streamline your workflow and significantly enhance productivity across your organization. Learn how to leverage specific tools like our advanced analytics suite, collaborative project management, or robust reporting capabilities.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: features, technical]",0.4301,0,0.4252,0.4647
+30,general_query,medium,general|technical|billing,general_s1|technical_s2|billing_s3,0.1835,"Thank you for reaching out. Based on your General Query inquiry, here is information from our knowledge base that should help:
+
+This comprehensive knowledge base serves as your primary resource for answers to common questions and provides detailed getting started guides. You can also check our real-time status page for updates on system performance and any scheduled maintenance.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: general, technical, billing]",0.4733,0,0.4889,0.519
+31,account_access,high,account,account_s3|account_s1|account_s0,0.325,"Thank you for reaching out. Based on your Account Access inquiry, here is information from our knowledge base that should help:
+
+We prioritize the security of your account with advanced measures like two-factor authentication. You can easily reset your password using the 'Forgot Password' link on the login page or through your security settings.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: account]",0.8495,0,0.8898,0.7643
+32,technical_issue,medium,technical,technical_s2|technical_s1|technical_s0,0.21,"Thank you for reaching out. Based on your Technical Issue inquiry, here is information from our knowledge base that should help:
+
+You can also check our real-time status page for updates on system performance and any scheduled maintenance. If you encounter any technical issues or error messages, please consult our dedicated troubleshooting section first.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: technical]",0.6157,0,0.7442,0.4952
+33,general_query,low,general|billing,general_s1|billing_s3|billing_s0,0.189,"Thank you for reaching out. Based on your General Query inquiry, here is information from our knowledge base that should help:
+
+This comprehensive knowledge base serves as your primary resource for answers to common questions and provides detailed getting started guides. Information regarding cancellations, refunds, and service downgrades is clearly outlined in our terms of service.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: general, billing]",0.5541,0,0.67,0.5719
+34,account_access,medium,account|features,account_s3|account_s1|features_s3,0.2828,"Thank you for reaching out. Based on your Account Access inquiry, here is information from our knowledge base that should help:
+
+We prioritize the security of your account with advanced measures like two-factor authentication. You can easily reset your password using the 'Forgot Password' link on the login page or through your security settings.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: account, features]",0.637,0,0.5796,0.6078
+35,billing,high,billing|technical,billing_s0|billing_s2|technical_s1,0.2829,"Thank you for reaching out. Based on your Billing inquiry, here is information from our knowledge base that should help:
+
+Understand your subscription details, including pricing plans, billing cycles, and payment methods, all accessible from your dashboard. Should you need to update your payment information, our secure portal allows for quick and easy modifications.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: billing, technical]",0.5809,0,0.4929,0.5515
+36,general_query,medium,general|billing,general_s1|billing_s3|general_s2,0.2439,ABSTAIN: Insufficient information to provide a reliable answer.,0.0,1,0.2684,0.4155
+37,general_query,medium,general|billing|features,general_s1|billing_s3|features_s1,0.172,"Thank you for reaching out. Based on your General Query inquiry, here is information from our knowledge base that should help:
+
+This comprehensive knowledge base serves as your primary resource for answers to common questions and provides detailed getting started guides. Information regarding cancellations, refunds, and service downgrades is clearly outlined in our terms of service.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: general, billing, features]",0.4325,0,0.4349,0.5864
+38,billing,high,billing|technical,billing_s0|technical_s2|billing_s1,0.2259,"Thank you for reaching out. Based on your Billing inquiry, here is information from our knowledge base that should help:
+
+Understand your subscription details, including pricing plans, billing cycles, and payment methods, all accessible from your dashboard. You can also check our real-time status page for updates on system performance and any scheduled maintenance.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: billing, technical]",0.5061,0,0.4586,0.5429
+39,general_query,low,general|features|technical,general_s1|features_s4|technical_s4,0.1564,"Thank you for reaching out. Based on your General Query inquiry, here is information from our knowledge base that should help:
+
+This comprehensive knowledge base serves as your primary resource for answers to common questions and provides detailed getting started guides. We continuously evolve our feature set based on user feedback and emerging industry trends, ensuring you always have the most effective tools.
+
+If this does not fully resolve your issue, please contact our support team directly for further assistance.
+
+[Sources: general, features, technical]",0.48,0,0.6218,0.6362
