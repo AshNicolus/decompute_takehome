@@ -1,4 +1,6 @@
 scikit-learn 
 pandas
 gradio
+streamlit
+requests
 transformers
