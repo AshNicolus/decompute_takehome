@@ -45,8 +45,8 @@ support_system/
 
 ### Option A — Run everything at once
 ```bash
-cd support_system/
-python run_all.py
+cd decompute_takehome/
+python main.py
 ```
 
 ### Option B — Run step by step
